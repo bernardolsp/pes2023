@@ -16,5 +16,5 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
   mongo:
-    image: "mongo:4.4"
+    image: "mongo:4.4.6"
 
