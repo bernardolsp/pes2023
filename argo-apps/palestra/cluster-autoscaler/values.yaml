@@ -1,0 +1,12 @@
+cluster-autoscaler:
+  # Add any values needed for cluster-autoscaler here
+  autoDiscovery:
+    clusterName: my-kubernetes-cluster
+  extraArgs:
+    skip-nodes-with-local-storage: "false"
+  rbac:
+    create: true
+  serviceAccount:
+    create: true
+  service:
+    type: ClusterIP
