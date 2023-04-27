@@ -13,6 +13,23 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-east-1"
+}
+
+provider "helm" {
+  kubernetes {
+    host                   = module.eks.cluster_endpoint
+    cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority)
+    token                  = module.eks.cluster_token
+  }
+}
+provider "kubectl" {
+    host                   = module.eks.cluster_endpoint
+    cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority)
+    token                  = module.eks.cluster_token
+}
+
 module "eks" {
   source                          = "terraform-aws-modules/eks/aws"
   version                         = "19.13.1"
