@@ -1,0 +1,7 @@
+grafana:
+  # Add any values needed for Grafana here
+  adminPassword: my-strong-password
+  persistence:
+    enabled: false
+  service:
+    type: ClusterIP
