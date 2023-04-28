@@ -9,4 +9,4 @@ appVersion: "1.0"
 dependencies:
   - name: node-local-dns
     version: ~1.0.0
-    repository: https://kubernetes.github.io/kubernetes.github.io
+    repository: https://kubernetes.github.io
