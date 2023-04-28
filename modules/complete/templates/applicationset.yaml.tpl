@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: ${app_name}
+  namespace: argocd
 spec:
   generators:
   - git:
@@ -12,6 +13,7 @@ spec:
   template:
     metadata:
       name: ${path_app_name}
+      namespace: argocd
     spec:
       project: default
       source:
@@ -21,3 +23,6 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: ${path_app_name}
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
