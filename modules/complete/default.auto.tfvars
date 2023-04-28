@@ -4,6 +4,6 @@ subnet_ids = ["subnet-09d6f25e0e3f58678", "subnet-018974e77cbc01007", "subnet-06
 vpc_id = "vpc-09f96bf1728e3af5f"
 app_name = "pes2023"
 app_repo_url = "https://github.com/bernardolsp/pes2023.git"
-app_repo_path = "argo-apps/palestra"
+app_repo_path = "argo-apps/palestra/*"
 path_app_name = "{{path.basename}}"
 path_app = "{{path}}"
